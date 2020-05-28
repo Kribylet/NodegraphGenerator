@@ -1,0 +1,11 @@
+image: mcr.microsoft.com/dotnet/core/sdk:latest
+
+before_script:
+    - apt-get update
+    - apt-get install -y --allow-unauthenticated libassimp-dev libc6-dev
+    - rm -rf /var/lib/apt/lists/*
+
+test:
+  script:
+    - cd SUM_Nodegraph_Generator
+    - dotnet test

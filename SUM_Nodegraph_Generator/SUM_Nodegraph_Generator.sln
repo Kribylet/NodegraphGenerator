@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nodegraph_Generator", "Nodegraph_Generator\Nodegraph_Generator.csproj", "{1243626E-C10E-4D5F-8F62-D62E8A08633A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nodegraph_Generator.Tests", "Nodegraph_Generator.Tests\Nodegraph_Generator.Tests.csproj", "{B3D365BE-8F65-45D6-A018-462F70B1ABF0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1243626E-C10E-4D5F-8F62-D62E8A08633A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1243626E-C10E-4D5F-8F62-D62E8A08633A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1243626E-C10E-4D5F-8F62-D62E8A08633A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1243626E-C10E-4D5F-8F62-D62E8A08633A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3D365BE-8F65-45D6-A018-462F70B1ABF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3D365BE-8F65-45D6-A018-462F70B1ABF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3D365BE-8F65-45D6-A018-462F70B1ABF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3D365BE-8F65-45D6-A018-462F70B1ABF0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CD7DEFD0-2AE6-43F1-9144-C3B10389C77D}
+	EndGlobalSection
+EndGlobal
