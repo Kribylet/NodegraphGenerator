@@ -21,11 +21,11 @@ namespace Nodegraph_Generator.Tests
 
             // IO must be either "Input_Files" or "Output_Files".
             // Expected output for test files.
-            // Paths contain "Nodegraph_Generator.Tests" 
+            // Paths contain "Nodegraph_Generator.Tests"
             string relativePath = Path.Combine(OSString, path);
             string inputPath = ArgParser.GetInputPath(relativePath);
 
-            string expectedPath = Path.Combine("kandidatprojektet", "SUM_Nodegraph_Generator", path);
+            string expectedPath = Path.Combine("SUM_Nodegraph_Generator", path);
 
             StringAssert.Contains(expectedPath, inputPath);
         }
@@ -37,11 +37,11 @@ namespace Nodegraph_Generator.Tests
 
             // IO must be either "Input_Files" or "Output_Files".
             // Expected output for test files.
-            // Paths contain "Nodegraph_Generator.Tests" 
+            // Paths contain "Nodegraph_Generator.Tests"
             string relativePath = Path.Combine(OSString, inputStr);
             string inputPath = ArgParser.GetInputPath(relativePath);
 
-            string expectedInputPath = Path.Combine("kandidatprojektet", "SUM_Nodegraph_Generator", inputStr);
+            string expectedInputPath = Path.Combine("SUM_Nodegraph_Generator", inputStr);
 
             StringAssert.Contains(expectedInputPath, inputPath);
         }
@@ -53,11 +53,11 @@ namespace Nodegraph_Generator.Tests
 
             // IO must be either "Input_Files" or "Output_Files".
             // Expected output for test files.
-            // Paths contain "Nodegraph_Generator.Tests" 
+            // Paths contain "Nodegraph_Generator.Tests"
             string relativePath = Path.Combine(OSString, outputStr);
             string outputPath = ArgParser.GetOutputPath(relativePath);
 
-            string expectedOutputPath = Path.Combine("kandidatprojektet", "SUM_Nodegraph_Generator", outputStr);
+            string expectedOutputPath = Path.Combine("SUM_Nodegraph_Generator", outputStr);
 
             StringAssert.Contains(expectedOutputPath, outputPath);
         }
@@ -70,15 +70,15 @@ namespace Nodegraph_Generator.Tests
 
             // IO must be either "Input_Files" or "Output_Files".
             // Expected output for test files.
-            // Paths contain "Nodegraph_Generator.Tests" 
+            // Paths contain "Nodegraph_Generator.Tests"
             string relativeInputPath = Path.Combine(OSString, inputStr);
             string relativeOutputPath = Path.Combine(OSString, outputStr);
 
             string[] inputArgs = { relativeInputPath, relativeOutputPath };
             FilePaths result = ArgParser.Parse(inputArgs);
 
-            string expectedInputPath = Path.Combine("kandidatprojektet", "SUM_Nodegraph_Generator", inputStr);
-            string expectedOutputPath = Path.Combine("kandidatprojektet", "SUM_Nodegraph_Generator", outputStr);
+            string expectedInputPath = Path.Combine("SUM_Nodegraph_Generator", inputStr);
+            string expectedOutputPath = Path.Combine("SUM_Nodegraph_Generator", outputStr);
 
             StringAssert.Contains(expectedInputPath, result.inFile);
             StringAssert.Contains(expectedOutputPath, result.outFile);
@@ -94,7 +94,7 @@ namespace Nodegraph_Generator.Tests
 
             // IO must be either "Input_Files" or "Output_Files".
             // Expected output for test files.
-            // Paths contain "Nodegraph_Generator.Tests" 
+            // Paths contain "Nodegraph_Generator.Tests"
             string relativeInputPath = Path.Combine(OSString, inputStr);
             string relativeOutputPath = Path.Combine(OSString, outputStr);
 
@@ -112,7 +112,7 @@ namespace Nodegraph_Generator.Tests
 
             // IO must be either "Input_Files" or "Output_Files".
             // Expected output for test files.
-            // Paths contain "Nodegraph_Generator.Tests" 
+            // Paths contain "Nodegraph_Generator.Tests"
             string relativeInputPath = Path.Combine(OSString, inputStr);
             string relativeOutputPath = Path.Combine(OSString, outputStr);
 
@@ -156,7 +156,7 @@ namespace Nodegraph_Generator.Tests
         {
             string[] args = { "a", "b", "-c" };
             ArgParser.CheckValidArgs(args);
-        }   
+        }
 
         [Test]
         public void When_OutputFileExists_Expect_Exception()

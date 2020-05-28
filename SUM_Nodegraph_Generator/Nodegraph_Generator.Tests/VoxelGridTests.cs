@@ -21,22 +21,6 @@ namespace Nodegraph_Generator.Tests
             Assert.That(bordersAreEmpty(voxelGrid));
         }
 
-        [TestCase("StrippedTunnel.fbx")]
-        [TestCase("StrippedTurnZone.fbx")]
-        public void When_CreateVoxelGridFromModelFile_Expect_EmptyBorders(string fileName)
-        {
-            String filePath = System.IO.Path.Combine(ArgParser.GetPath(OSString + "Input_Files"), fileName);
-            AssimpInterpreter interpreter = new AssimpInterpreter();
-            Structure structure = interpreter.Interpret(filePath);
-
-            foreach (Component component in structure.components)
-            {
-                VoxelGrid voxelGrid = new VoxelGrid(component);
-                Assert.That(bordersAreEmpty(voxelGrid));
-            }
-
-        }
-
         private bool bordersAreEmpty(VoxelGrid voxelGrid)
         {
             int maxZ = voxelGrid.coordinateGrid[0][0].Length-1;
