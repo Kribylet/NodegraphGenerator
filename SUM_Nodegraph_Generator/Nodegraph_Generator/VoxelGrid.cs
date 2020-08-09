@@ -457,6 +457,22 @@ namespace Nodegraph_Generator
             return VoxelPositionAsCoordinate(point.x, point.y, point.z);
         }
 
+
+        /*
+         * Retrieves the lowest filled voxel grid position that shares the same XZ-coordinates
+         * as the provided voxel coordinate.
+         */
+        public Vect3 LowestPositionAtCoordinate(Point3 point)
+        {
+            int lower = 0;
+            while (coordinateGrid[point.x][point.y-lower-1][point.z])
+            {
+                lower++;
+            }
+            int lowestY = point.y - lower;
+            return VoxelPositionAsCoordinate(point.x, lowestY, point.z);
+        }
+
         public Vect3 VoxelPositionAsCoordinate(int x, int y, int z)
         {
             Vect3 cubeCoordinate = voxelStartCoordinate +
