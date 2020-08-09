@@ -8,7 +8,7 @@ namespace Nodegraph_Generator
         private const double SquareRootOfThree = 1.73d;
         public static double VoxelDistanceThreshold = 2d;
         public static double mergeThreshold = 3d;
-        public static double outerLayerLimit = 0.3d; // Controls how much of the grids approximate radius is considered external as percentage of diameter. (50% diameter == 100% radius)
+        public static double outerLayerLimit = 0d; // Controls how much of the grids approximate radius is considered external as percentage of diameter. (50% diameter == 100% radius)
 
         /*
          * Generate a NodeGraph for an entire Structure using VoxelStrategy
